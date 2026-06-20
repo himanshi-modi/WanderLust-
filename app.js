@@ -1,7 +1,7 @@
 if(process.env.NODE_ENV!="production"){
     require('dotenv').config()
 }
-console.log(process.env.SECRET);
+
 const express=require("express");
 const app=express();
 const mongoose=require("mongoose");
@@ -93,7 +93,7 @@ app.get("/demouser",async(req,res)=>{
 
 app.engine("ejs",ejsMate);
 async function main(){
-    await mongoose.connect('mongodb://MERNUSER:Mern12345@ac-afsbq6p-shard-00-00.afxjaa6.mongodb.net:27017,ac-afsbq6p-shard-00-01.afxjaa6.mongodb.net:27017,ac-afsbq6p-shard-00-02.afxjaa6.mongodb.net:27017/test?ssl=true&replicaSet=atlas-2xezdt-shard-0&authSource=admin&appName=Cluster0');
+    await mongoose.connect(process.env.CLOUD_DATABASE_URL);
 }
 main().then((res)=>{
     console.log(res);
@@ -101,8 +101,9 @@ main().then((res)=>{
     console.log(err);
 });
 
-app.listen(8080,()=>{
-    console.log("App is listening!");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`App is listening on port ${port}`);
 });
 
 

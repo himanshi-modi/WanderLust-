@@ -18,7 +18,6 @@ const listings=require("./routes/listing.js");
 const reviews=require("./routes/reviews.js");
 const session=require("express-session");
 const MongoStore = require('connect-mongo').default;
-console.log(MongoStore);
 const flash=require("connect-flash");
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");

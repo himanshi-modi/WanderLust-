@@ -37,27 +37,32 @@ module.exports.renderNewForm=async(req,res)=>{
 };
 
 //show Listing
-module.exports.showListing=async (req,res,next)=>{
-        let { id } = req.params;
+module.exports.showListing = async (req, res, next) => {
+    let { id } = req.params;
 
-    let listing = await Listing.findById(id)
-        .populate("owner")
-        .populate({
-            path: "reviews",
-            populate: {
-                path: "author"
-            }
-        });
-        // console.log("Geometry:", listing.geometry);
+    let listing = await Listing.findById(id);
 
-        if (!listing) {
-            req.flash("error", "Listing doesn't exist!");
-            return res.redirect("/listings");
+    if (!listing) {
+        req.flash("error", "Listing doesn't exist!");
+        return res.redirect("/listings");
+    }
+
+    console.log("LISTING FROM DB:", listing);
+    console.log("OWNER ID:", listing.owner);
+
+    await listing.populate("owner");
+
+    console.log("OWNER AFTER POPULATE:", listing.owner);
+
+    await listing.populate({
+        path: "reviews",
+        populate: {
+            path: "author"
         }
+    });
 
     res.render("./listings/show.ejs", { listing });
-        
-}
+};
 
 //add new Listing
 module.exports.createListing=async (req,res,next)=>{

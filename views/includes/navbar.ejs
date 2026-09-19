@@ -1,54 +1,135 @@
-<style>
-  .search-btn{
-    background-color: #fe424d;
-    color: #fff;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .search-btn:hover{
-    background-color: #fe424d;
-    color:#fff;
-  }
-  .search-btn i{
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-inp{
-    border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-    font-size: 1rem;
-  }
-</style>
+<nav class="main-navbar">
 
-    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fa-solid fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
-      <span class="navbar-toggler-icon"></span>
+  <div class="navbar-inner">
+
+    <!-- Brand -->
+    <a href="/listings" class="brand">
+
+      <span class="brand-icon">
+        <i class="fa-solid fa-compass"></i>
+      </span>
+
+      <span class="brand-name">
+        WanderLust
+      </span>
+
+    </a>
+
+
+    <!-- Desktop navigation -->
+    <div class="desktop-nav">
+
+      <a href="/listings" class="nav-item">
+        Explore
+      </a>
+
+    </div>
+
+
+    <!-- Search -->
+    <form
+      class="navbar-search"
+      action="/listings"
+      method="GET"
+    >
+
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+      <input
+        type="search"
+        name="search"
+        value="<%= search || '' %>"
+        placeholder="Search destinations"
+        aria-label="Search destinations"
+      >
+
+      <button type="submit">
+        Search
+      </button>
+
+    </form>
+
+
+    <!-- Right navigation -->
+    <div class="navbar-actions">
+
+      <a href="/listings/new" class="nav-item add-listing">
+        Add Listing
+      </a>
+
+      <% if (!currUser) { %>
+
+        <a href="/signup" class="nav-item nav-strong">
+          Sign up
+        </a>
+
+        <a href="/login" class="nav-item nav-strong">
+          Login
+        </a>
+
+      <% } %>
+
+
+      <% if (currUser) { %>
+
+        <a href="/logout" class="nav-item nav-strong">
+          Log out
+        </a>
+
+      <% } %>
+
+    </div>
+
+
+    <!-- Mobile menu button -->
+    <button
+      class="mobile-menu-button"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mobileNav"
+      aria-label="Open navigation"
+    >
+      <i class="fa-solid fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link "  href="/listings">Explore</a>
+
+  </div>
+
+
+  <!-- Mobile navigation -->
+  <div class="collapse mobile-nav" id="mobileNav">
+
+    <div class="mobile-nav-inner">
+
+      <a href="/listings">
+        Explore
+      </a>
+
+      <a href="/listings/new">
+        Add Listing
+      </a>
+
+      <% if (!currUser) { %>
+
+        <a href="/signup">
+          Sign up
+        </a>
+
+        <a href="/login">
+          Login
+        </a>
+
+      <% } %>
+
+      <% if (currUser) { %>
+
+        <a href="/logout">
+          Log out
+        </a>
+
+      <% } %>
+
     </div>
-    <div class="ms-auto">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2 search-inp" type="search"   name="search" placeholder="Search Destinations" value="<%= search || '' %>"aria-label="Search"/>
-        <button class="btn btn-outline-success search-btn" type="submit">Search<i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-    </div>
-    <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Add Listing</a>
-        <%if(!currUser){ %>
-          <a class="nav-link "  href="/signup"><b>Sign up</b></a>
-          <a class="nav-link" href="/login"><b>Login</b></a>
-        <%}%>
-        
-        <% if(currUser){%>
-          <a class="nav-link" href="/logout"><b>Log out</b></a>
-        <%}%>
-        
-       
-    </div> 
-    </div>
-    </div>
-    </nav>
+
+  </div>
+
+</nav>

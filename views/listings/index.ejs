@@ -1,157 +1,212 @@
-<%-layout("layouts/boilerplate")%>
-<style>
-    #filters{
-        display: flex;
-        flex-wrap: wrap;
-         
-    }
-    .filter{
-        text-decoration: none;
-        color: inherit;
-        margin-right: 1.95rem;
-        margin-top: 1rem;
-        text-align: center;
-        opacity: 0.7;
-    }
-    .filter:hover{
-        cursor: pointer;
-        opacity: 1;
-    }
-    .tax-info{
-        display: none;
-    }
-    .tax-toggle{
-        border:1px black solid ;
-        border-radius: 1rem;
-        padding: 1rem;
-        height: 3.25rem;
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-    }
-    .filter.active{
-    opacity: 1;
-    border-bottom: 2px solid black;
-}
-    
-</style>
-<body>
-    <div id="filters">
-        <a href="/listings?category=Trending" class="filter <%= selectedCategory === 'Trending' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-fire"></i>
+<%- layout("layouts/boilerplate") %>
+
+<main class="listings-page">
+
+  <!-- Category navigation -->
+  <section class="category-section">
+
+    <div class="category-scroll">
+
+      <a href="/listings?category=Trending"
+         class="category-filter <%= selectedCategory === 'Trending' ? 'active' : '' %>">
+        <i class="fa-solid fa-fire"></i>
+        <span>Trending</span>
+      </a>
+
+      <a href="/listings?category=Farms"
+         class="category-filter <%= selectedCategory === 'Farms' ? 'active' : '' %>">
+        <i class="fa-solid fa-wheat-awn"></i>
+        <span>Farms</span>
+      </a>
+
+      <a href="/listings?category=Rooms"
+         class="category-filter <%= selectedCategory === 'Rooms' ? 'active' : '' %>">
+        <i class="fa-solid fa-bed"></i>
+        <span>Rooms</span>
+      </a>
+
+      <a href="/listings?category=Amazing Views"
+         class="category-filter <%= selectedCategory === 'Amazing Views' ? 'active' : '' %>">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <span>Amazing Views</span>
+      </a>
+
+      <a href="/listings?category=Iconic Cities"
+         class="category-filter <%= selectedCategory === 'Iconic Cities' ? 'active' : '' %>">
+        <i class="fa-solid fa-city"></i>
+        <span>Iconic Cities</span>
+      </a>
+
+      <a href="/listings?category=Surfing"
+         class="category-filter <%= selectedCategory === 'Surfing' ? 'active' : '' %>">
+        <i class="fa-solid fa-water"></i>
+        <span>Surfing</span>
+      </a>
+
+      <a href="/listings?category=Beaches"
+         class="category-filter <%= selectedCategory === 'Beaches' ? 'active' : '' %>">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <span>Beaches</span>
+      </a>
+
+      <a href="/listings?category=Arctic"
+         class="category-filter <%= selectedCategory === 'Arctic' ? 'active' : '' %>">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Arctic</span>
+      </a>
+
+      <a href="/listings?category=Tree House"
+         class="category-filter <%= selectedCategory === 'Tree House' ? 'active' : '' %>">
+        <i class="fa-solid fa-tree"></i>
+        <span>Tree House</span>
+      </a>
+
+      <a href="/listings?category=Camping"
+         class="category-filter <%= selectedCategory === 'Camping' ? 'active' : '' %>">
+        <i class="fa-solid fa-campground"></i>
+        <span>Camping</span>
+      </a>
+
+      <a href="/listings?category=House Boat"
+         class="category-filter <%= selectedCategory === 'House Boat' ? 'active' : '' %>">
+        <i class="fa-solid fa-ship"></i>
+        <span>House Boat</span>
+      </a>
+
+    </div>
+
+    <!-- Tax toggle -->
+    <div class="tax-toggle-wrapper">
+      <div class="tax-toggle">
+        <span>Display total after taxes</span>
+
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="switchCheckDefault"
+          >
         </div>
-        <p>Trending</p>
-        </a>
-        
-        <a href="/listings?category=Farms" class="filter <%= selectedCategory === 'Farms' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-building-wheat"></i>
-        </div>
-        <p>Farms</p>
-        </a>
-        <a href="/listings?category=Rooms" class="filter <%= selectedCategory === 'Rooms' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-bed"></i>
-        </div>
-        <p>Rooms</p>
-        </a>
-        <a href="/listings?category=Amazing Views" class="filter <%= selectedCategory === 'Amazing Views' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-panorama"></i>
-        </div>
-        <p>Amazing Views</p>
-        </a>
-        <a href="/listings?category=Iconic Cities" class="filter <%= selectedCategory === 'Iconic Cities' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-city"></i>
-        </div>
-        <p>Iconic cities</p>
-        </a>
-        <a href="/listings?category=Surfing" class="filter <%= selectedCategory === 'Surfing' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-house-tsunami"></i>
-        </div>
-        <p>Surfing</p>
-        </a>
-        <a href="/listings?category=Beaches" class="filter <%= selectedCategory === 'Beaches' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-umbrella-beach"></i>
-        </div>
-        <p>Beachs</p>
-        </a>
-        <a href="/listings?category=Artics" class="filter <%= selectedCategory === 'Arctics' ? 'active' : '' %>" >
-        <div>
-            <i class="fa-solid fa-snowflake"></i>
-        </div>
-        <p>Arctics</p>
-    </a>
-        <a href="/listings?category=Tree House" class="filter <%= selectedCategory === 'Tree House' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-tree"></i>
-        </div>
-        <p>Tree house</p>
-    </a>
-        <a href="/listings?category=Camping" class="filter <%= selectedCategory === 'Camping' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-campground"></i>
-        </div>
-        <p>Camping</p>
-    </a>
-        <a href="/listings?category=House boat" class="filter <%= selectedCategory === 'House Boat' ? 'active' : '' %>">
-        <div>
-            <i class="fa-solid fa-ship"></i>
-        </div>
-        <p>House Boat</p>
-    </a>
-       
-        <div class="tax-toggle">
-            <div class="form-check-reverse form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-                <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Listings -->
+  <% if (allListings.length === 0) { %>
+
+    <section class="empty-state">
+
+      <div class="empty-state-icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+      <h2>No listings found</h2>
+
+      <p>
+        We couldn't find any stays matching your search.
+        Try another destination or category.
+      </p>
+
+      <a href="/listings" class="btn primary-btn">
+        Explore all stays
+      </a>
+
+    </section>
+
+  <% } else { %>
+
+    <section class="listing-grid">
+
+      <% for (let listing of allListings) { %>
+
+        <a
+          href="/listings/<%= listing._id %>"
+          class="listing-link"
+        >
+
+          <article class="listing-card">
+
+            <div class="listing-image-wrapper">
+
+              <img
+                src="<%= listing.image.url %>"
+                class="listing-image"
+                alt="<%= listing.title %>"
+                loading="lazy"
+              >
+
+              <div class="listing-heart">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
             </div>
 
-        </div>
-    </div>
-    <% if(allListings.length === 0){ %>
-    <div class="text-center mt-5">
-        <h3>No listings found.</h3>
-    </div>
-<% } %>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-        <%for(let listing of allListings){%>
-            <a href="/listings/<%=listing._id%>" class="listing-link">
-                <div class="card col listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img-top" style="height: 20rem;" alt="listing_image">
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                           
-                        </h5>
-                        <p class="card-text">
-                        <b><%=listing.title %></b><br>
-                        &#8377; <%=listing.price.toLocaleString("en-IN") %>/ night
-                            <i class="tax-info">&nbsp; &nbsp;+18% GST</i>
-                        </p>
-                    </div>
-                </div>
-                </a>
-            <%}%>
-    </div>
-    
-    
-</body>
+            <div class="listing-info">
+
+              <h2 class="listing-title">
+                <%= listing.title %>
+              </h2>
+
+              <p class="listing-price">
+  <strong class="price-value" data-price="<%= listing.price %>">
+    ₹ <%= listing.price.toLocaleString("en-IN") %>
+  </strong>
+
+  <span>/ night</span>
+
+  <span class="tax-info">
+    +18% GST
+  </span>
+</p>
+
+            </div>
+
+          </article>
+
+        </a>
+
+      <% } %>
+
+    </section>
+
+  <% } %>
+
+</main>
+
+
 <script>
-    let taxSwitch=document.getElementById("switchCheckDefault");
-    taxSwitch.addEventListener("click",()=>{
-        let taxInfo=document.getElementsByClassName("tax-info");
-        for(info of taxInfo){
-            if(info.style.display!="inline"){
-                console.log("show ");
-                info.style.display="inline"
-            }else{
-                info.style.display="none"
-            }
+  const taxSwitch = document.getElementById("switchCheckDefault");
+
+  if (taxSwitch) {
+    taxSwitch.addEventListener("change", () => {
+
+      const prices = document.querySelectorAll(".price-value");
+      const taxInfo = document.querySelectorAll(".tax-info");
+
+      prices.forEach(price => {
+        const basePrice = Number(price.dataset.price);
+
+        if (taxSwitch.checked) {
+          const totalPrice = basePrice * 1.18;
+
+          price.textContent =
+            "₹ " + Math.round(totalPrice).toLocaleString("en-IN");
+        } else {
+          price.textContent =
+            "₹ " + basePrice.toLocaleString("en-IN");
         }
-    })
+      });
+
+      taxInfo.forEach(info => {
+        info.classList.toggle("show-tax", taxSwitch.checked);
+      });
+
+    });
+  }
 </script>

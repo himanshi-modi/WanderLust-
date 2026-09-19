@@ -36,7 +36,8 @@ const listingSchema=new mongoose.Schema({
     ],
     owner:{
       type:Schema.Types.ObjectId,
-      ref:"User"
+      ref:"User",
+      required:true
     },
     geometry:{
       type:{

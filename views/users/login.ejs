@@ -1,22 +1,138 @@
-<%-layout("layouts/boilerplate") %>
-<div class="row mt-3">
-    <h1 class="col-6 offset-3">Login on WanderLust</h1>
-  <div class="col-6 offset-3">
-    <form method="post" action="/login" novalidate class="needs-validation">
-        <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" placeholder="Enter username" id="username"
-          class="form-control" required>
+<%- layout("layouts/boilerplate") %>
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+        <!-- Brand -->
+        <div class="auth-brand">
+            <div class="brand-mark">W</div>
+            <span>WanderLust</span>
         </div>
 
 
-        <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" placeholder="Enter password" id="password"
-          class="form-control" required>
+        <!-- Header -->
+        <div class="auth-header">
+            <h1>Welcome back</h1>
+            <p>Log in to continue exploring WanderLust.</p>
         </div>
-        <button class="btn btn-success">Login</button>
-    </form>
 
-   </div>
+
+        <!-- Login Form -->
+        <form
+            method="post"
+            action="/login"
+            novalidate
+            class="needs-validation"
+        >
+
+            <!-- Username -->
+            <div class="auth-field">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    id="username"
+                    class="form-control"
+                    autocomplete="username"
+                    required
+                >
+
+                <div class="invalid-feedback">
+                    Please enter your username.
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="auth-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-input">
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        id="password"
+                        class="form-control"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="togglePassword"
+                        aria-label="Show password"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter your password.
+                </div>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="auth-submit">
+
+                <span>Login</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- Signup -->
+        <p class="auth-footer">
+            Don't have an account?
+            <a href="/signup">Create one</a>
+        </p>
+
+    </div>
+
 </div>
+
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    if (togglePassword && passwordInput) {
+
+        togglePassword.addEventListener("click", () => {
+
+            const isPassword =
+                passwordInput.type === "password";
+
+            passwordInput.type =
+                isPassword ? "text" : "password";
+
+            togglePassword.innerHTML =
+                isPassword
+                    ? '<i class="fa-regular fa-eye-slash"></i>'
+                    : '<i class="fa-regular fa-eye"></i>';
+
+            togglePassword.setAttribute(
+                "aria-label",
+                isPassword ? "Hide password" : "Show password"
+            );
+        });
+    }
+</script>

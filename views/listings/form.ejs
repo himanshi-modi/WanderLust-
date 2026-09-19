@@ -1,99 +1,332 @@
-<%-layout("layouts/boilerplate") %>
-<div class="row">
-  <div class="col-8 offset-2">
-    <br><br><br>
-    <h2>Create a new Listing</h2>
+<%- layout("layouts/boilerplate") %>
 
-    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+<div class="listing-form-page">
 
-      <!-- Title -->
-      <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
-        <input type="text" name="listing[title]" placeholder="Enter title"
-          class="form-control" required>
-        <div class="invalid-feedback">
-          Please enter a title.
+    <div class="listing-form-container">
+
+        <!-- Header -->
+        <div class="listing-form-header">
+
+            <div class="listing-form-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+
+            <div>
+                <p class="listing-form-eyebrow">
+                    HOST YOUR PLACE
+                </p>
+
+                <h1>Create a new listing</h1>
+
+                <p class="listing-form-subtitle">
+                    Share a place you love with travelers around the world.
+                </p>
+            </div>
+
         </div>
-      </div>
 
-      <!-- Description -->
-      <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]" rows="3" placeholder="Enter description"
-          class="form-control" required></textarea>
-        <div class="invalid-feedback">
-          Please provide a description.
-        </div>
-      </div>
-      <div class="mb-3">
-        <label for="category" class="form-label">Category</label>
 
-        <select
-          name="listing[category]"
-          id="category"
-          class="form-select"
-        >
-        <option value="Trending">Trending</option>
-        <option value="Farms">Farms</option>
-        <option value="Rooms">Rooms</option>
-        <option value="Amazing Views">Amazing Views</option>
-        <option value="Iconic Cities">Iconic Cities</option>
-        <option value="Surfing">Surfing</option>
-        <option value="Beaches">Beaches</option>
-        <option value="Arctic">Arctic</option>
-        <option value="Tree House">Tree House</option>
-        <option value="Camping">Camping</option>
-        <option value="House Boat">House Boat</option>
-        </select>
-      </div>
-      <!-- Image -->
-      <div class="mb-3">
-        <label for="image" class="form-label">Upload Listing Image</label>
-        <input type="file" name="listing[image]" class="form-control" required>
-        <div class="invalid-feedback">
-          Please enter a valid URL.
-        </div>
-      </div>
-      <!-- Price & Country -->
-      <div class="row">
-        <div class="mb-3 col-md-4">
-          <label for="price" class="form-label">Price</label>
-          <input name="listing[price]" type="number" placeholder="Enter price"
-            class="form-control" required>
-          <div class="invalid-feedback">
-            Please enter a price.
-          </div>
-        </div>
-        <div class="mb-3 col-md-8">
-          <label for="country" class="form-label">Country</label>
-          <input name="listing[country]" type="text" placeholder="Enter country"
-            class="form-control" required>
-          <div class="invalid-feedback">
-            Please enter a country.
-          </div>
-        </div>
-      </div>
+        <!-- Form Card -->
+        <div class="listing-form-card">
 
-      <!-- Location -->
-      <div class="mb-3">
-        <label for="location" class="form-label">Location</label>
-        <textarea name="listing[location]" rows="3" placeholder="Enter location"
-          class="form-control" required></textarea>
-        <div class="invalid-feedback">
-          Please provide a location.
+            <form
+                method="post"
+                action="/listings"
+                novalidate
+                class="needs-validation listing-form"
+                enctype="multipart/form-data"
+            >
+
+                <!-- Basic Information -->
+                <section class="form-section">
+
+                    <div class="form-section-heading">
+                        <h2>Basic information</h2>
+                        <p>Tell guests a little about your place.</p>
+                    </div>
+
+
+                    <!-- Title -->
+                    <div class="form-field">
+
+                        <label for="title">
+                            Listing title
+                        </label>
+
+                        <input
+                            type="text"
+                            name="listing[title]"
+                            id="title"
+                            placeholder="e.g. Cozy beachfront cottage"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter a title.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="form-field">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea
+                            name="listing[description]"
+                            id="description"
+                            rows="5"
+                            placeholder="Describe what makes this place special..."
+                            required
+                        ></textarea>
+
+                        <div class="invalid-feedback">
+                            Please provide a description.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="form-field">
+
+                        <label for="category">
+                            Category
+                        </label>
+
+                        <select
+                            name="listing[category]"
+                            id="category"
+                            required
+                        >
+                            <option value="" disabled selected>
+                                Select a category
+                            </option>
+
+                            <option value="Trending">
+                                Trending
+                            </option>
+
+                            <option value="Farms">
+                                Farms
+                            </option>
+
+                            <option value="Rooms">
+                                Rooms
+                            </option>
+
+                            <option value="Amazing Views">
+                                Amazing Views
+                            </option>
+
+                            <option value="Iconic Cities">
+                                Iconic Cities
+                            </option>
+
+                            <option value="Surfing">
+                                Surfing
+                            </option>
+
+                            <option value="Beaches">
+                                Beaches
+                            </option>
+
+                            <option value="Arctic">
+                                Arctic
+                            </option>
+
+                            <option value="Tree House">
+                                Tree House
+                            </option>
+
+                            <option value="Camping">
+                                Camping
+                            </option>
+
+                            <option value="House Boat">
+                                House Boat
+                            </option>
+
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Please select a category.
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Image -->
+                <section class="form-section">
+
+                    <div class="form-section-heading">
+                        <h2>Cover image</h2>
+                        <p>
+                            Choose a clear, attractive photo of your place.
+                        </p>
+                    </div>
+
+                    <div class="image-upload-field">
+
+                        <label
+                            for="image"
+                            class="image-upload-box"
+                        >
+
+                            <div class="image-upload-icon">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+
+                            <div class="image-upload-content">
+
+                                <strong>
+                                    Upload a listing image
+                                </strong>
+
+                                <span>
+                                    Click to browse your files
+                                </span>
+
+                                <small>
+                                    JPG, PNG or WEBP
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            name="listing[image]"
+                            id="image"
+                            accept="image/png,image/jpeg,image/webp"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please upload a listing image.
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Location & Pricing -->
+                <section class="form-section">
+
+                    <div class="form-section-heading">
+                        <h2>Location & pricing</h2>
+                        <p>Help travelers understand where your place is.</p>
+                    </div>
+
+
+                    <div class="form-two-column">
+
+                        <!-- Price -->
+                        <div class="form-field">
+
+                            <label for="price">
+                                Price per night
+                            </label>
+
+                            <div class="input-prefix">
+                                <span>₹</span>
+
+                                <input
+                                    name="listing[price]"
+                                    id="price"
+                                    type="number"
+                                    min="0"
+                                    placeholder="1500"
+                                    required
+                                >
+                            </div>
+
+                            <div class="invalid-feedback">
+                                Please enter a price.
+                            </div>
+
+                        </div>
+
+
+                        <!-- Country -->
+                        <div class="form-field">
+
+                            <label for="country">
+                                Country
+                            </label>
+
+                            <input
+                                name="listing[country]"
+                                id="country"
+                                type="text"
+                                placeholder="e.g. India"
+                                required
+                            >
+
+                            <div class="invalid-feedback">
+                                Please enter a country.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="form-field">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            name="listing[location]"
+                            id="location"
+                            type="text"
+                            placeholder="e.g. Goa, Maharashtra"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please provide a location.
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Actions -->
+                <div class="listing-form-actions">
+
+                    <a
+                        href="/listings"
+                        class="listing-cancel-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="listing-submit-btn"
+                    >
+                        <span>Create listing</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </form>
+
         </div>
-      </div>
 
-      <!-- Submit Button -->
-      <br><br><br>
-      <div class="mb-3">
-        <button type="submit" class="btn btn-dark add-btn">
-          Add
-        </button>
-      </div>
+    </div>
 
-    </form>
-  </div>
 </div>
-
-

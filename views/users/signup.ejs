@@ -1,27 +1,135 @@
-<%-layout("layouts/boilerplate") %>
-<div class="row mt-3">
-    <h1 class="col-6 offset-3">Signup on WanderLust</h1>
-  <div class="col-6 offset-3">
-    <form method="post" action="/signup" novalidate class="needs-validation">
-        <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" placeholder="Enter username" id="username"
-          class="form-control" required>
+<%- layout("layouts/boilerplate") %>
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+        <!-- Brand -->
+        <div class="auth-brand">
+            <div class="brand-mark">W</div>
+            <span>WanderLust</span>
         </div>
 
-        <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" name="email" placeholder="Enter email" id="email"
-          class="form-control" required>
+        <!-- Heading -->
+        <div class="auth-header">
+            <h1>Create your account</h1>
+            <p>Start discovering places worth staying in.</p>
         </div>
 
-        <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" placeholder="Enter password" id="password"
-          class="form-control" required>
-        </div>
-        <button class="btn btn-success">Sign up</button>
-    </form>
+        <!-- Signup Form -->
+        <form
+            method="post"
+            action="/signup"
+            novalidate
+            class="needs-validation"
+        >
 
-   </div>
+            <!-- Username -->
+            <div class="auth-field">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    id="username"
+                    class="form-control"
+                    autocomplete="username"
+                    required
+                >
+
+                <div class="invalid-feedback">
+                    Please enter a username.
+                </div>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="auth-field">
+
+                <label for="email">
+                    Email address
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    id="email"
+                    class="form-control"
+                    autocomplete="email"
+                    required
+                >
+
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+
+            </div>
+
+
+            <!-- Password -->
+            <div class="auth-field">
+
+                <div class="password-label">
+                    <label for="password">
+                        Password
+                    </label>
+                </div>
+
+                <div class="password-input">
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Create a password"
+                        id="password"
+                        class="form-control"
+                        autocomplete="new-password"
+                        required
+                        minlength="6"
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        id="togglePassword"
+                        aria-label="Show password"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback">
+                    Password must be at least 6 characters.
+                </div>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="auth-submit">
+
+                <span>Create account</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+
+        <!-- Login -->
+        <p class="auth-footer">
+            Already have an account?
+            <a href="/login">Log in</a>
+        </p>
+
+    </div>
+
 </div>

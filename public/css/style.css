@@ -1,6 +1,4 @@
-/* =========================================================
-   WANDERLUST DESIGN SYSTEM
-========================================================= */
+
 
 :root {
     --primary: #ff385c;
@@ -24,9 +22,7 @@
 }
 
 
-/* =========================================================
-   GLOBAL
-========================================================= */
+
 
 * {
     box-sizing: border-box;
@@ -64,9 +60,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   NAVBAR
-========================================================= */
 
 .main-navbar {
     position: sticky;
@@ -91,7 +84,6 @@ body > .container {
 }
 
 
-/* Brand */
 
 .brand {
     display: flex;
@@ -127,7 +119,7 @@ body > .container {
 }
 
 
-/* Desktop navigation */
+
 
 .desktop-nav {
     display: flex;
@@ -152,7 +144,6 @@ body > .container {
 }
 
 
-/* Search */
 
 .navbar-search {
     width: min(440px, 40vw);
@@ -232,7 +223,7 @@ body > .container {
 }
 
 
-/* Right actions */
+
 
 .navbar-actions {
     display: flex;
@@ -243,7 +234,7 @@ body > .container {
 }
 
 
-/* Mobile menu */
+
 
 .mobile-menu-button {
     display: none;
@@ -262,9 +253,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   LISTINGS PAGE
-========================================================= */
+
 
 .listings-page {
     width: 100%;
@@ -276,9 +265,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   CATEGORY BAR
-========================================================= */
+
 
 .category-section {
     position: sticky;
@@ -360,9 +347,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   TAX TOGGLE
-========================================================= */
+
 
 .tax-toggle-wrapper {
     flex-shrink: 0;
@@ -406,9 +391,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   LISTING GRID
-========================================================= */
 
 .listing-grid {
     display: grid;
@@ -420,9 +402,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   LISTING CARD
-========================================================= */
+
 
 .listing-link {
     display: block;
@@ -544,9 +524,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   EMPTY STATE
-========================================================= */
+
 
 .empty-state {
     max-width: 500px;
@@ -607,9 +585,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   LISTING DETAILS PAGE
-========================================================= */
+
 
 .show-page {
     width: min(1280px, calc(100% - 64px));
@@ -620,9 +596,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+
 
 .show-header {
     display: flex;
@@ -695,9 +669,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
 
 .show-hero {
     width: 100%;
@@ -722,9 +693,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   CONTENT
-========================================================= */
 
 .show-content {
     display: grid;
@@ -765,9 +733,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   FACTS
-========================================================= */
 
 .show-facts {
     display: grid;
@@ -821,9 +786,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   BOOKING CARD
-========================================================= */
+
 
 .booking-card {
     align-self: start;
@@ -947,9 +910,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   OWNER ACTIONS
-========================================================= */
 
 .show-actions {
     display: flex;
@@ -1006,9 +966,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   REVIEWS
-========================================================= */
 
 .reviews-section {
     margin-top: 38px;
@@ -1043,9 +1000,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   REVIEW FORM
-========================================================= */
 
 .review-form-card {
     width: 100%;
@@ -1068,7 +1022,7 @@ body > .container {
 }
 
 
-/* Heading */
+
 
 .review-form-heading {
     display: flex;
@@ -1116,11 +1070,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   ⭐ FINAL ALIGNMENT
-   BOTH DIVS START AT EXACTLY THE SAME HEIGHT
-========================================================= */
-
 .review-input-row {
     display: grid;
 
@@ -1136,7 +1085,6 @@ body > .container {
 }
 
 
-/* LEFT RATING BOX */
 
 .review-rating {
     min-height: 162px;
@@ -1171,7 +1119,6 @@ body > .container {
 }
 
 
-/* RIGHT REVIEW BOX */
 
 .review-comment {
     margin: 0;
@@ -1239,9 +1186,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   REVIEW FOOTER
-========================================================= */
+
 
 .review-form-footer {
     display: flex;
@@ -1308,9 +1253,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   REVIEWS GRID
-========================================================= */
 
 .reviews-grid {
     display: grid;
@@ -1428,9 +1370,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   NO REVIEWS
-========================================================= */
 
 .no-reviews {
     width: 100%;
@@ -1469,9 +1408,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   LOCATION
-========================================================= */
+
 
 .location-section {
     margin-top: 55px;
@@ -1502,9 +1439,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -1534,10 +1468,6 @@ body > .container {
     }
 }
 
-
-/* =========================================================
-   REVIEW RESPONSIVE
-========================================================= */
 
 @media (max-width: 800px) {
 
@@ -1569,9 +1499,7 @@ body > .container {
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 767px) {
 
@@ -1707,9 +1635,6 @@ body > .container {
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
 
 @media (max-width: 420px) {
 
@@ -1738,13 +1663,7 @@ body > .container {
     }
 }
 
-/* ================================
-   WANDERLUST FOOTER
-================================ */
 
-/* =========================
-   FOOTER
-========================= */
 
 .site-footer {
     width: 100%;
@@ -1764,7 +1683,6 @@ body > .container {
     text-align: center;
 }
 
-/* Social icons */
 
 .f-info-socials {
     display: flex;
@@ -1785,7 +1703,7 @@ body > .container {
     transform: translateY(-2px);
 }
 
-/* Copyright */
+
 
 .f-info-middle {
     color: #222;
@@ -1793,7 +1711,6 @@ body > .container {
     font-weight: 400;
 }
 
-/* Privacy / Terms */
 
 .f-info-links {
     display: flex;
@@ -1815,7 +1732,7 @@ body > .container {
 }
 
 
-/* Mobile */
+
 
 @media (max-width: 600px) {
 
@@ -1834,5 +1751,976 @@ body > .container {
 
     .f-info-links a {
         font-size: 14px;
+    }
+}
+
+/* =========================================================
+   AUTH PAGES
+   ========================================================= */
+
+.auth-page {
+    width: 100%;
+    min-height: calc(100vh - 68px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 56px 24px 70px;
+
+    background: #f7f8fa;
+}
+
+
+/* ---------------------------------------------------------
+   CARD
+   --------------------------------------------------------- */
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+
+    padding: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ---------------------------------------------------------
+   BRAND
+   --------------------------------------------------------- */
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    color: #222222;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 750;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.auth-header {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.auth-header h1 {
+    margin: 0 0 8px;
+
+    color: #222222;
+
+    font-size: 29px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+}
+
+.auth-header p {
+    margin: 0;
+
+    color: #717171;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.auth-field {
+    margin-bottom: 20px;
+}
+
+.auth-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #222222;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Bootstrap override */
+
+.auth-field .form-control {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d9dce2;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-field .form-control::placeholder {
+    color: #9ca0a7;
+}
+
+.auth-field .form-control:hover {
+    border-color: #bfc2c7;
+}
+
+.auth-field .form-control:focus {
+    border-color: #222222;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 34, 34, 0.07);
+}
+
+
+/* ---------------------------------------------------------
+   PASSWORD
+   --------------------------------------------------------- */
+
+.password-input {
+    position: relative;
+}
+
+.password-input .form-control {
+    padding-right: 50px;
+}
+
+.password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #777b82;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #222222;
+    background: #f5f5f5;
+}
+
+
+/* ---------------------------------------------------------
+   SUBMIT
+   --------------------------------------------------------- */
+
+.auth-submit {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #222222;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-submit:hover {
+    background: #000000;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.auth-submit:active {
+    transform: translateY(0);
+}
+
+.auth-submit i {
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN LINK
+   --------------------------------------------------------- */
+
+.auth-footer {
+    margin: 24px 0 0;
+
+    text-align: center;
+
+    color: #717171;
+
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #222222;
+
+    font-weight: 650;
+
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   VALIDATION
+   --------------------------------------------------------- */
+
+.auth-field .invalid-feedback {
+    margin-top: 6px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   AUTH — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .auth-page {
+        min-height: calc(100vh - 64px);
+
+        align-items: flex-start;
+
+        padding: 32px 16px 50px;
+    }
+
+    .auth-card {
+        max-width: 500px;
+
+        margin-top: 10px;
+
+        padding: 32px 24px;
+
+        border-radius: 17px;
+    }
+
+    .auth-header h1 {
+        font-size: 26px;
+    }
+
+    .auth-brand {
+        margin-bottom: 26px;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .auth-page {
+        padding: 24px 12px 40px;
+    }
+
+    .auth-card {
+        padding: 28px 20px;
+
+        border-radius: 15px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+    }
+
+    .auth-field .form-control,
+    .auth-submit {
+        height: 50px;
+    }
+}
+
+/* =========================================================
+   CREATE LISTING PAGE
+   ========================================================= */
+
+.listing-form-page {
+    width: 100%;
+
+    min-height: calc(100vh - 68px);
+
+    padding: 55px 24px 80px;
+
+    background: #f7f8fa;
+}
+
+
+.listing-form-container {
+    width: min(900px, 100%);
+
+    margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.listing-form-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.listing-form-icon {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff0f3;
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+.listing-form-eyebrow {
+    margin: 0 0 4px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    letter-spacing: 1.5px;
+}
+
+.listing-form-header h1 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    font-weight: 750;
+
+    letter-spacing: -1px;
+}
+
+.listing-form-subtitle {
+    margin: 7px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   CARD
+   --------------------------------------------------------- */
+
+.listing-form-card {
+    width: 100%;
+
+    padding: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ---------------------------------------------------------
+   SECTIONS
+   --------------------------------------------------------- */
+
+.form-section {
+    padding-bottom: 34px;
+
+    margin-bottom: 34px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-of-type {
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+.form-section-heading {
+    margin-bottom: 25px;
+}
+
+.form-section-heading h2 {
+    margin: 0 0 5px;
+
+    color: var(--text);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+.form-section-heading p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   FORM FIELDS
+   --------------------------------------------------------- */
+
+.form-field {
+    margin-bottom: 21px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+.form-field > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 650;
+}
+
+
+/* Inputs */
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    width: 100%;
+
+    border: 1px solid #d9dce2;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+    height: 50px;
+
+    padding: 0 14px;
+}
+
+.form-field textarea {
+    min-height: 130px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9ca0a7;
+}
+
+.form-field input:hover,
+.form-field textarea:hover,
+.form-field select:hover {
+    border-color: #bfc2c7;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    border-color: #222222;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 34, 34, 0.07);
+}
+
+
+/* ---------------------------------------------------------
+   TWO COLUMN
+   --------------------------------------------------------- */
+
+.form-two-column {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   PRICE PREFIX
+   --------------------------------------------------------- */
+
+.input-prefix {
+    position: relative;
+}
+
+.input-prefix > span {
+    position: absolute;
+
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    color: #717171;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.input-prefix input {
+    padding-left: 31px;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE UPLOAD
+   --------------------------------------------------------- */
+
+.image-upload-field {
+    position: relative;
+}
+
+.image-upload-box {
+    min-height: 150px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 17px;
+
+    border: 1.5px dashed #cfd2d7;
+
+    border-radius: 14px;
+
+    background: #fafafa;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.image-upload-box:hover {
+    border-color: var(--primary);
+
+    background: #fff8fa;
+}
+
+.image-upload-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #fff0f3;
+
+    color: var(--primary);
+
+    font-size: 18px;
+}
+
+.image-upload-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.image-upload-content strong {
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.image-upload-content span {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+.image-upload-content small {
+    margin-top: 3px;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+.image-upload-field > input[type="file"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   ACTIONS
+   --------------------------------------------------------- */
+
+.listing-form-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 34px;
+}
+
+.listing-cancel-btn {
+    height: 50px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.listing-cancel-btn:hover {
+    background: #f7f7f7;
+
+    border-color: #c9c9c9;
+
+    color: #222;
+}
+
+.listing-submit-btn {
+    min-width: 165px;
+
+    height: 50px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.listing-submit-btn:hover {
+    background: #000000;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.listing-submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .listing-form-page {
+        padding: 35px 16px 55px;
+    }
+
+    .listing-form-header {
+        align-items: flex-start;
+
+        gap: 14px;
+
+        margin-bottom: 22px;
+    }
+
+    .listing-form-icon {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+    }
+
+    .listing-form-header h1 {
+        font-size: 27px;
+    }
+
+    .listing-form-subtitle {
+        line-height: 1.5;
+    }
+
+    .listing-form-card {
+        padding: 30px 24px;
+
+        border-radius: 17px;
+    }
+
+    .form-two-column {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .listing-form-actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .listing-submit-btn,
+    .listing-cancel-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .listing-form-page {
+        padding: 25px 12px 45px;
+    }
+
+    .listing-form-header {
+        gap: 11px;
+    }
+
+    .listing-form-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .listing-form-header h1 {
+        font-size: 24px;
+    }
+
+    .listing-form-subtitle {
+        font-size: 13px;
+    }
+
+    .listing-form-card {
+        padding: 25px 18px;
+
+        border-radius: 15px;
+    }
+
+    .form-section {
+        padding-bottom: 28px;
+
+        margin-bottom: 28px;
+    }
+
+    .image-upload-box {
+        min-height: 140px;
+
+        padding: 22px 15px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .image-upload-content {
+        align-items: center;
     }
 }
